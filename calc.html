@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cost Calculator</title>
+    <style>
+        /* [Your CSS Here] */
+    </style>
+</head>
+<body>
+    <div id="moto-classes">
+        <div id="class-mofa" class="category">
+            <table>
+                <form id="calculator-form" data-gtm-form-interact-id="0">
+                    <tbody>
+                        <!-- Administrative Fee -->
+                        <tr class="tab-names">
+                            <td>Administrative Cost</td>
+                            <td></td>
+                            <td>Unit Price</td>
+                            <td>Total</td>
+                        </tr>
+                        <tr class="calc-row">
+                            <td class="opt-description">Registration at the Führerschein Stelle</td>
+                            <td class="opt-number">
+                                <input class="phoneNumber fixed" type="text" name="quantity1" maxlength="3" value="1" disabled>
+                                <span class="symbol" style="text-align:center;">X</span>
+                            </td>
+                            <td class="opt-price">
+                                <input class="phoneNumber" type="text" name="price1" maxlength="4" value="40">
+                                <span class="symbol">€</span>
+                            </td>
+                            <td class="opt-sum">
+                                <input type="text" name="registrationfee" value="40" disabled>
+                                <span class="symbol">€</span>
+                            </td>
+                        </tr>
+
+                        <tr class="calc-row">
+                            <td class="opt-description">First Aid Course </td>
+                            <td class="opt-number">
+                                <input class="phoneNumber fixed" type="text" name="quantity2" maxlength="3" value="1" disabled>
+                                <span class="symbol">X</span>
+                            </td>
+                            <td class="opt-price">
+                                <input class="phoneNumber" type="text" name="price2" maxlength="4" value="60">
+                                <span class="symbol">€</span>
+                            </td>
+                            <td class="opt-sum">
+                                <input type="text" name="firstaidcourse" value="60" disabled>
+                                <span class="symbol">€</span>
+                            </td>
+                        </tr>
+
+                        <tr class="calc-row">
+                            <td class="opt-description">Eye Test </td>
+                            <td class="opt-number">
+                                <input class="phoneNumber fixed" type="text" name="quantity3" maxlength="3" value="1" disabled>
+                                <span class="symbol">X</span>
+                            </td>
+                            <td class="opt-price">
+                                <input class="phoneNumber" type="text" name="price3" maxlength="4" value="10">
+                                <span class="symbol">€</span>
+                            </td>
+                            <td class="opt-sum">
+                                <input type="text" name="eyetest" value="10" disabled>
+                                <span class="symbol">€</span>
+                            </td>
+                        </tr>
+                        <!-- Add more rows as per your requirement -->
+                        <!-- Total Cost -->
+                        <tr class="total-sum">
+                            <td></td>
+                            <td></td>
+                            <td>Total Administrative Cost:</td>
+                            <td class="opt-sum">
+                                <input type="text" name="total-sum" value="110" disabled>
+                                <span class="symbol">€</span>
+                            </td>
+                        </tr>
+                        <tr >
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr> 
+                        <tr >
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>  
+                        <!-- Driving  Fee -->
+                        <tr class="tab-names">
+                            <td colspan="2">Driving School Cost</td>
+                            <td>Unit Price</td>
+                            <td>Total</td>
+                        </tr>
+                        <tr class="calc-row">
+                            <td class="opt-description">Basic Fee including Learning App</td>
+                            <td class="opt-number">
+                                <input class="phoneNumber fixed" type="text" name="quantity4" maxlength="1" value="1" disabled>
+                                <span class="symbol">Quantity X</span>
+                            </td>
+                            <td class="opt-price">
+                                <input class="phoneNumber" type="text" name="price4" maxlength="4" value="300">
+                                <span class="symbol">€</span>
+                            </td>
+                            <td class="opt-sum">
+                                <input type="text" name="basicfee" value="300" disabled>
+                                <span class="symbol">€</span>
+                            </td>
+                        </tr>
+
+                        <tr class="calc-row">
+                            <td class="opt-description">Special Driving Lessons</td>
+                            <td class="opt-number">
+                                <input class="phoneNumber fixed" type="text" name="quantity5" maxlength="100" value="12">
+                                <span class="symbol">Hours X</span>
+                            </td>
+                            <td class="opt-price">
+                                <input class="phoneNumber" type="text" name="price5" maxlength="100" value="60">
+                                <span class="symbol">€</span>
+                            </td>
+                            <td class="opt-sum">
+                                <input type="text" name="specialhours" value="720" disabled>
+                                <span class="symbol">€</span>
+                            </td>
+                        </tr>
+
+                        <tr class="calc-row">
+                            <td class="opt-description">Normal Driving lessons </td>
+                            <td class="opt-number">
+                                <input class="phoneNumber fixed" type="text" name="quantity6" maxlength="4" value="12">
+                                <span class="symbol">Hours X</span>
+                            </td>
+                            <td class="opt-price">
+                                <input class="phoneNumber" type="text" name="price6" maxlength="4" value="50">
+                                <span class="symbol">€</span>
+                            </td>
+                            <td class="opt-sum">
+                                <input type="text" name="normalhours" value="600" disabled>
+                                <span class="symbol">€</span>
+                            </td>
+                        </tr>
+                        <!-- Total Cost -->
+                        <tr class="total-sum">
+                            <td></td>
+                            <td></td>
+                            <td>Total Administrative Cost of School:</td>
+                            <td class="opt-sum">
+                                <input type="text" name="total-sum-school" value="1620" disabled>
+                                <span class="symbol">€</span>
+                            </td>
+                        </tr>
+
+                        <tr >
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr> 
+                        <tr >
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>  
+                        <!-- Thoery  Fee -->
+                        <tr class="tab-names">
+                            <td>Theory Exam Cost</td>
+                            <td></td>
+                            <td>Unit Price</td>
+                            <td>Total</td>
+                        </tr>
+                        <tr class="calc-row">
+                            <td class="opt-description">Thoery exam TÜV Fee</td>
+                            <td class="opt-number">
+                                <input class="phoneNumber fixed" type="text" name="quantity7" maxlength="1" value="1">
+                                <span class="symbol">Attempts X</span>
+                            </td>
+                            <td class="opt-price">
+                                <input class="phoneNumber" type="text" name="price7" maxlength="4" value="22.49" disabled>
+                                <span class="symbol">€</span>
+                            </td>
+                            <td class="opt-sum">
+                                <input type="text" name="thoeryfee" value="300" disabled>
+                                <span class="symbol">€</span>
+                            </td>
+                        </tr>
+
+                        <tr class="calc-row">
+                            <td class="opt-description">Introduction to theory exam (School)</td>
+                            <td class="opt-number">
+                                <input class="phoneNumber fixed" type="text" name="quantity8" maxlength="100" value="1" disabled>
+                                <span class="symbol">Attempts X</span>
+                            </td>
+                            <td class="opt-price">
+                                <input class="phoneNumber" type="text" name="price8" maxlength="100" value="90">
+                                <span class="symbol">€</span>
+                            </td>
+                            <td class="opt-sum">
+                                <input type="text" name="theoryintro" value="90" disabled>
+                                <span class="symbol">€</span>
+                            </td>
+                        </tr>
+
+                        
+                        <!-- Total Cost -->
+                        <tr class="total-sum-thoery">
+                            <td></td>
+                            <td></td>
+                            <td>Total Thoery Exam Cost:</td>
+                            <td class="opt-sum">
+                                <input type="text" name="total-sum-theory" value="112.49" disabled>
+                                <span class="symbol">€</span>
+                            </td>
+                        </tr>
+
+                        <tr >
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr> 
+                        <tr >
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>  
+                        <!-- Practical  Fee -->
+                        <tr class="tab-names">
+                            <td>Practical Exam Cost</td>
+                            <td></td>
+                            <td>Unit Price</td>
+                            <td>Total</td>
+                        </tr>
+                        <tr class="calc-row">
+                            <td class="opt-description">Practical exam TÜV Fee</td>
+                            <td class="opt-number">
+                                <input class="phoneNumber fixed" type="text" name="quantity9" maxlength="1" value="1">
+                                <span class="symbol">Attempts X</span>
+                            </td>
+                            <td class="opt-price">
+                                <input class="phoneNumber" type="text" name="price9" maxlength="4" value="91.75" disabled>
+                                <span class="symbol">€</span>
+                            </td>
+                            <td class="opt-sum">
+                                <input type="text" name="pracfee" value="91.75" disabled>
+                                <span class="symbol">€</span>
+                            </td>
+                        </tr>
+
+                        <tr class="calc-row">
+                            <td class="opt-description">Introduction to Practical exam (School)</td>
+                            <td class="opt-number">
+                                <input class="phoneNumber fixed" type="text" name="quantity10" maxlength="100" value="1" disabled>
+                                <span class="symbol">Attempts X</span>
+                            </td>
+                            <td class="opt-price">
+                                <input class="phoneNumber" type="text" name="price10" maxlength="100" value="120">
+                                <span class="symbol">€</span>
+                            </td>
+                            <td class="opt-sum">
+                                <input type="text" name="pracintro" value="120" disabled>
+                                <span class="symbol">€</span>
+                            </td>
+                        </tr>
+
+                        
+                        <!-- Total Cost -->
+                        <tr class="total-sum-prac">
+                            <td></td>
+                            <td></td>
+                            <td>Total Practical Exam Cost:</td>
+                            <td class="opt-sum">
+                                <input type="text" name="total-sum-prac" value="211.75" disabled>
+                                <span class="symbol">€</span>
+                            </td>
+                        </tr>
+
+                        <tr >
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr> 
+                        <tr >
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>     
+                        <!-- Total Cost -->
+                        <tr class="total-sum-license">
+                            
+                            <td>Total License Cost:</td>
+                            <td></td>
+                            <td></td>
+                            <td class="opt-sum">
+                                <input type="text" name="total-sum-license" value="1620" disabled>
+                                <span class="symbol">€</span>
+                            </td>
+                        </tr>
+
+                        <tr class="refresh">
+                            <td colspan="4">
+                                <input class="refresh-calc" type="button" value="Calculate" onclick="calculateTotal()">
+                                <input class="refresh-calc" type="reset" value="Reset Values">
+                            </td>
+                        </tr>
+                    </tbody>
+                </form>
+            </table>
+        </div>
+    </div>
+    <script>
+        function calculateTotal() {
+            const quantity1 = parseFloat(document.getElementsByName('quantity1')[0].value) || 0;
+            const price1 = parseFloat(document.getElementsByName('price1')[0].value) || 0;
+            document.getElementsByName('registrationfee')[0].value = (quantity1 * price1).toFixed(2);
+
+            const quantity2 = parseFloat(document.getElementsByName('quantity2')[0].value) || 0;
+            const price2 = parseFloat(document.getElementsByName('price2')[0].value) || 0;
+            document.getElementsByName('firstaidcourse')[0].value = (quantity2 * price2).toFixed(2);
+
+            const quantity3 = parseFloat(document.getElementsByName('quantity3')[0].value) || 0;
+            const price3 = parseFloat(document.getElementsByName('price3')[0].value) || 0;
+            document.getElementsByName('eyetest')[0].value = (quantity3 * price3).toFixed(2);
+
+            const quantity4 = parseFloat(document.getElementsByName('quantity4')[0].value) || 0;
+            const price4 = parseFloat(document.getElementsByName('price4')[0].value) || 0;
+            document.getElementsByName('basicfee')[0].value = (quantity4 * price4).toFixed(2);
+
+            const quantity5 = parseFloat(document.getElementsByName('quantity5')[0].value) || 0;
+            const price5 = parseFloat(document.getElementsByName('price5')[0].value) || 0;
+            document.getElementsByName('specialhours')[0].value = (quantity5 * price5).toFixed(2);
+
+            const quantity6 = parseFloat(document.getElementsByName('quantity6')[0].value) || 0;
+            const price6 = parseFloat(document.getElementsByName('price6')[0].value) || 0;
+            document.getElementsByName('normalhours')[0].value = (quantity6 * price6).toFixed(2);
+
+            const quantity7 = parseFloat(document.getElementsByName('quantity7')[0].value) || 0;
+            const price7 = parseFloat(document.getElementsByName('price7')[0].value) || 0;
+            document.getElementsByName('thoeryfee')[0].value = (quantity7 * price7).toFixed(2);
+
+            document.getElementsByName('quantity8')[0].value = (quantity7);
+            const quantity8 = parseFloat(document.getElementsByName('quantity8')[0].value) || 0;
+            const price8 = parseFloat(document.getElementsByName('price8')[0].value) || 0;
+            document.getElementsByName('theoryintro')[0].value = (quantity8 * price8).toFixed(2);
+
+            const quantity9 = parseFloat(document.getElementsByName('quantity9')[0].value) || 0;
+            const price9 = parseFloat(document.getElementsByName('price9')[0].value) || 0;
+            document.getElementsByName('pracfee')[0].value = (quantity9 * price9).toFixed(2);
+
+            document.getElementsByName('quantity10')[0].value = (quantity9);
+            const quantity10 = parseFloat(document.getElementsByName('quantity10')[0].value) || 0;
+            const price10 = parseFloat(document.getElementsByName('price10')[0].value) || 0;
+            document.getElementsByName('pracintro')[0].value = (quantity10 * price10).toFixed(2);
+            
+            // Calculate total sum
+            const registrationfee = parseFloat(document.getElementsByName('registrationfee')[0].value) || 0;
+            const firstaidcourse = parseFloat(document.getElementsByName('firstaidcourse')[0].value) || 0;
+            const eyetest = parseFloat(document.getElementsByName('eyetest')[0].value) || 0;
+
+            const basicfee = parseFloat(document.getElementsByName('basicfee')[0].value) || 0;
+            const specialhours = parseFloat(document.getElementsByName('specialhours')[0].value) || 0;
+            const normalhours = parseFloat(document.getElementsByName('normalhours')[0].value) || 0;
+
+            const thoeryfee = parseFloat(document.getElementsByName('thoeryfee')[0].value) || 0;
+            const theoryintro = parseFloat(document.getElementsByName('theoryintro')[0].value) || 0;
+
+            const pracfee = parseFloat(document.getElementsByName('pracfee')[0].value) || 0;
+            const pracintro = parseFloat(document.getElementsByName('pracintro')[0].value) || 0;
+
+            const totalSum = (registrationfee + firstaidcourse + eyetest);
+            document.getElementsByName('total-sum')[0].value = totalSum.toFixed(2);
+
+            const totalSumSchool = (basicfee + specialhours + normalhours);
+            document.getElementsByName('total-sum-school')[0].value = totalSumSchool.toFixed(2);
+
+            const totalSumTheory = (thoeryfee + theoryintro);
+            document.getElementsByName('total-sum-theory')[0].value = totalSumTheory.toFixed(2);
+
+            const totalSumPrac = (pracfee + pracintro);
+            document.getElementsByName('total-sum-prac')[0].value = totalSumPrac.toFixed(2);
+
+            const totalLicense = (totalSum + totalSumSchool + totalSumTheory + totalSumPrac);
+            document.getElementsByName('total-sum-license')[0].value = totalLicense.toFixed(2);
+        }
+    </script>
+</body>
+</html>
